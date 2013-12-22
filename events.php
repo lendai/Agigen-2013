@@ -2,8 +2,17 @@
 $events = array(
     (object)array(
         'title' => "World's first hockey puck shooting machine",
-        'when' => 'February 2013'
+        'when' => 'February 2013',
+        'img' => 'oddset.jpg',
+        'video' => 'http://vimeo.com/61710166'
     ),
+    (object)array(
+        'title' => "Picard.se",
+        'caption' => "We helped launch the site for the French food company Picard",
+        'when' => 'February 2013',
+        'img' => 'picard.jpg'
+    ),
+    
     
     (object)array(
         'title' => 'The Big Blog Exchange',

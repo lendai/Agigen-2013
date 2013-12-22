@@ -29,7 +29,7 @@ require 'events.php';
     <body>
         <header class="agigen-section main-header vc-container">
             <div class="vc">
-                <h1>Agigen 2013</h1>
+                <h1 class="agigen-section__header">Agigen 2013</h1>
                 <h2 class="agigen-section__subheader">A year in review</h2>
             </div>
         </header>
