@@ -39,8 +39,8 @@ require 'events.php';
         ?>
         <section class="agigen-section"
         <?php if (isset($event->img)): ?> style="background-image: url(/img/events/<?php echo $event->img ?>)" <?php endif ?> 
-        data-top-top="filter: blur(0px);"
-        data-top-bottom="filter: blur(50px);"
+        data-top-top="filter: grayscale(0);"
+        data-top-bottom="filter: grayscale(1);"
         >
             <div class="agigen-section__container vc-container">
                 <div class="vc">
