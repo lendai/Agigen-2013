@@ -56,12 +56,27 @@ $events = array(
         'when' => 'May 2013',
         'link' => 'http://dev.agigen.se/shroomify.html'
     ), 
-        
-    
     (object)array(
         'title' => 'Billogram - #FemOrd',
         'when' => 'May 2013'
     ),
+    (object)array(
+        'title' => 'Annual BBQ-party',
+        'when' => 'May 2013',
+        'img' => 'june-bbq.jpg'
+    ),
+    (object)array(
+        'title' => 'Signed the lease for our new office',
+        'when' => 'July 2013',
+        'img' => 'new-office-lease.jpg'
+    ),
+    (object)array(
+        'title' => 'Max joined Agigen',
+        'when' => 'August 2013',
+        'img' => 'max-joined.jpg'
+    ),
+
+
     
     (object)array(
         'title' => 'hobbit'
