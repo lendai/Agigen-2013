@@ -78,7 +78,7 @@ $events = array(
     (object)array(
         'award' => true,
         'title' => "FWA Site of the day - Where's the party",
-        'link' => 'http://www.thefwa.com/site/where-s-the-party-by-carlsberg'
+        'link' => 'http://www.thefwa.com/site/where-s-the-party-by-carlsberg',
         'when' => 'September 2013',
     ),
     

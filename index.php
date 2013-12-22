@@ -19,7 +19,10 @@ require 'events.php';
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-
+        <header class="main-header">
+            <h1>Agigen 2013</h1>
+        </header>
+        
         <?php
         foreach ($events as $event):
         ?>
@@ -33,6 +36,24 @@ require 'events.php';
         <?php
         endforeach;
         ?>
+        <footer>
+            <p>
+            &bull; 2014<br>
+            &bull; ?????<br>
+            &bull; PROFIT
+            </p>
+            
+            <p>
+                Want to join the <a href="http://agigen.se">best company in the world</a>? Send an email to <a href="mailto:daniel@agigen.se">daniel@agigen.se</a>
+            </p>
+
+            <p>
+                And at last;<br>
+                from all of us, to all of you. A merry merry christmas!
+            </p>
+            
+        </footer>
+        
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
