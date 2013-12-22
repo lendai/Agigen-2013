@@ -38,7 +38,10 @@ require 'events.php';
         foreach ($events as $event):
         ?>
         <section class="agigen-section"
-        <?php if (isset($event->img)): ?> style="background-image: url(/img/events/<?php echo $event->img ?>)" <?php endif ?> 
+        style="
+        <?php if (isset($event->img)): ?>background-image: url(/img/events/<?php echo $event->img ?>); <?php endif ?> 
+        <?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?> 
+        "
         data-center-center="filter: grayscale(0%);"
         data-top-center="filter: grayscale(100%);"
         >

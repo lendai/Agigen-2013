@@ -49,8 +49,6 @@ $events = array(
         'when' => 'May 2:nd',
         'link' => (object)array('url' => 'http://winners.webbyawards.com/2013/interactive-advertising-media/campaign-categories/online-campaigns/build-with-chrome', 'title' => 'Read about it'),
     ),
-    
-    
     (object)array(
         'title' => "Carlsberg - Where's the party featuring Axwell",
         'when' => 'May 10:th',
@@ -58,11 +56,11 @@ $events = array(
         'link' => (object)array('url' => 'httphttp://www.where-is-the-party.com', 'title' => 'Visit the site'),
         
     ),
-    (object)array(
-        'title' => 'Released Shroomify',
-        'when' => 'May 2013',
-        'link' => 'http://dev.agigen.se/shroomify.html'
-    ), 
+    // (object)array(
+    //     'title' => 'Released Shroomify',
+    //     'when' => 'May 2013',
+    //     'link' => 'http://dev.agigen.se/shroomify.html'
+    // ), 
     (object)array(
         'title' => 'Billogram - #FemOrd',
         'when' => 'May 2013',
@@ -74,21 +72,23 @@ $events = array(
         'img' => 'june-bbq.jpg'
     ),
     (object)array(
-        'title' => 'Signed the lease for our new office',
+        'title' => 'New office',
+        'caption' => 'We signed the lease to a new office - three times as large as the old one.',
         'when' => 'July 2013',
         'img' => 'new-office-lease.jpg'
     ),
     (object)array(
         'title' => 'Max',
-        'caption' => 'joined Agigen',
+        'caption' => 'Our new designer joined Agigen',
         'when' => 'August 2013',
         'img' => 'max-joined.jpg'
     ),
     (object)array(
         'award' => true,
         'title' => "FWA Site of the day - Where's the party",
-        'link' => 'http://www.thefwa.com/site/where-s-the-party-by-carlsberg',
+        'link' => (object)array('title' => 'Visit the site', 'url' => 'http://www.thefwa.com/site/where-s-the-party-by-carlsberg'),
         'when' => 'September 2013',
+        'img' => 'fwa.jpg'
     ),
     // (object)array(
     //     'title' => 'Featured in Swedish Startup Space',
@@ -99,38 +99,42 @@ $events = array(
         'title' => 'New office!',
         'when' => 'October 2013',
         'img' => 'new-office-keys.jpg',
-        'link' => 'http://blog.agigen.se/2013/10/reoffice/'
+        'link' => (object)array('url' => 'http://blog.agigen.se/2013/10/reoffice/', 'title' => 'Read the blog post')
     ),
     (object)array(
         'title' => 'The Hobbit - A journey through Middle-earth',
         'caption' => 'A Google Chrome Experiment',
         'link' => (object)array('title' => 'Visit the site', 'url' => 'http://middle-earth.thehobbit.com/'),
-        'video' => 'http://www.youtube.com/watch?v=BVvMGD8LNL0'
+        'video' => 'http://www.youtube.com/watch?v=BVvMGD8LNL0',
+        'img' => 'hobbit.jpg'
     ),
     (object)array(
         'title' => 'Oscar',
-        'caption' => 'joined Agigen',
+        'caption' => 'Our new front end dev joined Agigen',
         'img' => 'oscar.jpg'
     ),
     (object)array(
         'title' => 'Our new site released',
         'when' => 'November 2013',
-        'link' => (object)array('url' => 'http://agigen.se', 'title' => 'agigen.se')
+        'link' => (object)array('url' => 'http://agigen.se', 'title' => 'agigen.se'),
+        'img' => 'agigensite.jpg',
+        'color' => '#000'
     ),
     (object)array(
         'title' => 'Therese',
-        'caption' => 'joined Agigen',
+        'caption' => 'Our new front end dev joined Agigen',
         'when' => 'December 2013',
         'img' => 'therese.jpg'
     ),
     (object)array(
         'title' => 'Viktor',
-        'caption' => 'joined Agigen',
+        'caption' => 'Our new back end dev joined Agigen',
         'when' => 'December 2013',
         'img' => 'viktor.jpg'
     ),
     (object)array(
         'title' => 'Agigen moving in party',
+        'caption' => 'about 150 people enjoying beer, tacos and great web development',
         'when' => '4:th of december 2013',
         'img' => 'party.jpg'
     ),
