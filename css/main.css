@@ -119,6 +119,10 @@ p,ul,ol,li {
    background-size: cover;
 }
 
+.agigen-section__container {
+    height: 100%;
+}
+
 .agigen-section__header {
     font-family: 'ITCAvantGardePro-Bold';
     font-weight: normal;
@@ -150,6 +154,21 @@ p,ul,ol,li {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
+/*
+ * Vertical Centering
+ */
+
+.vc-container:before {
+    content: "";
+    height: 100%;
+    margin-left: -.5em;
+}
+
+.vc-container:before, .vc {
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /*
  * Image replacement
