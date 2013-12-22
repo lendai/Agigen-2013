@@ -27,9 +27,11 @@ require 'events.php';
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <header class="agigen-section main-header">
-            <h1>Agigen 2013</h1>
-            <h2 class="agigen-section__subheader">A year in review</h2>
+        <header class="agigen-section main-header vc-container">
+            <div class="vc">
+                <h1>Agigen 2013</h1>
+                <h2 class="agigen-section__subheader">A year in review</h2>
+            </div>
         </header>
         
         <?php
@@ -38,13 +40,13 @@ require 'events.php';
         <section class="agigen-section"
         <?php if (isset($event->img)): ?> style="background-image: url(/img/events/<?php echo $event->img ?>)" <?php endif ?> 
         >
-            <div class="agigen-section__container">
-                
-                <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
-                <?php if (isset($event->caption)): ?>
-                    <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
-                <?php endif ?>
-                
+            <div class="agigen-section__container vc-container">
+                <div class="vc">
+                    <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
+                    <?php if (isset($event->caption)): ?>
+                        <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
+                    <?php endif ?>
+                </div>
             </div>
         </section>
         <?php
