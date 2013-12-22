@@ -39,6 +39,8 @@ require 'events.php';
         ?>
         <section class="agigen-section"
         <?php if (isset($event->img)): ?> style="background-image: url(/img/events/<?php echo $event->img ?>)" <?php endif ?> 
+        data-top-top="filter: blur(0px);"
+        data-top-bottom="filter: blur(50px);"
         >
             <div class="agigen-section__container vc-container">
                 <div class="vc">
@@ -89,6 +91,7 @@ require 'events.php';
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
+        <script src="js/skrollr.js"></script>
         <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
