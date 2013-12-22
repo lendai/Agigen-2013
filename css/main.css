@@ -160,11 +160,6 @@ p,ul,ol,li {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
-/*
- * Vertical Centering
- */
-
 .vc-container:before {
     content: "";
     height: 100%;
@@ -175,11 +170,6 @@ p,ul,ol,li {
     display: inline-block;
     vertical-align: middle;
 }
-
-/*
- * Image replacement
- */
-
 .ir {
     background-color: transparent;
     border: 0;
@@ -187,27 +177,16 @@ p,ul,ol,li {
     /* IE 6/7 fallback */
     *text-indent: -9999px;
 }
-
 .ir:before {
     content: "";
     display: block;
     width: 0;
     height: 150%;
 }
-
-/*
- * Hide from both screenreaders and browsers: h5bp.com/u
- */
-
 .hidden {
     display: none !important;
     visibility: hidden;
 }
-
-/*
- * Hide only visually, but have it available for screenreaders: h5bp.com/v
- */
-
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -218,12 +197,6 @@ p,ul,ol,li {
     position: absolute;
     width: 1px;
 }
-
-/*
- * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: h5bp.com/p
- */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -233,27 +206,9 @@ p,ul,ol,li {
     position: static;
     width: auto;
 }
-
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
 .invisible {
     visibility: hidden;
 }
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
 .clearfix:before,
 .clearfix:after {
     content: " "; /* 1 */
@@ -264,22 +219,7 @@ p,ul,ol,li {
     clear: both;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 420px) {
     /* Style adjustments for viewports that meet the condition */
 }
 
@@ -288,76 +228,4 @@ p,ul,ol,li {
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
 }
