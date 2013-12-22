@@ -75,45 +75,59 @@ $events = array(
         'when' => 'August 2013',
         'img' => 'max-joined.jpg'
     ),
+    (object)array(
+        'award' => true,
+        'title' => "FWA Site of the day - Where's the party",
+        'link' => 'http://www.thefwa.com/site/where-s-the-party-by-carlsberg'
+        'when' => 'September 2013',
+    ),
+    
+    (object)array(
+        'title' => 'Featured in Swedish Startup Space',
+        'when' => 'September 2013',
+        'link' => 'http://swedishstartupspace.com/2013/09/18/agigen-lean-startup-shop/'
+    ),
+    
+    (object)array(
+        'title' => 'New office!',
+        'when' => 'October 2013',
+        'img' => 'new-office-keys.jpg',
+        'link' => 'http://blog.agigen.se/2013/10/reoffice/'
+    ),
+    (object)array(
+        'title' => 'The Hobbit 2 - A journey through Middle-earth',
+        'link' => 'http://middle-earth.thehobbit.com/'
+    ),
+    (object)array(
+        'title' => 'Oscar joined Agigen'
+    ),
+    (object)array(
+        'title' => 'Our new site released',
+        'when' => 'November 2013',
+        'link' => 'http://agigen.se'
+    ),
+    (object)array(
+        'title' => 'Therese joined Agigen',
+        'when' => 'December 2013'
+    ),
+    (object)array(
+        'title' => 'Victor joined Agigen',
+        'when' => 'December 2013'
+    ),
+    (object)array(
+        'title' => 'Agigen moving in party',
+        'when' => '4:th of december 2013',
+    ),
+    (object)array(
+        'title' => 'FuckMyHistory.com',
+    ),
+    (object)array(
+        'title' => 'Sandhamn'
+    ),
+    (object)array(
+        'title' => '2013 in numbers'
+    ),
 
-
-    
-    (object)array(
-        'title' => 'hobbit'
-    ),
-    (object)array(
-        'title' => 'nytt kontor'
-    ),
-    (object)array(
-        'title' => 'inflyttningsfest'
-    ),
-    (object)array(
-        'title' => 'oscar började'
-    ),
-    (object)array(
-        'title' => 'therese började'
-    ),
-    (object)array(
-        'title' => 'victor började'
-    ),
-    (object)array(
-        'title' => 'omsättning ökade'
-    ),
-    (object)array(
-        'title' => '2014 = ???? ???  PROFIT'
-    ),
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
 );
 
 
