@@ -124,6 +124,10 @@ p,ul,ol,li {
     height: 100%;
 }
 
+.agigen-section__container {
+    height: 100%;
+}
+
 .agigen-section__header {
     font-family: 'ITCAvantGardePro-Bold';
     font-weight: normal;
