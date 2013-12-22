@@ -8,28 +8,42 @@ require 'events.php';
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Agigen 2013</title>
+        <meta name="description" content="Agigen 2013 - A year in review">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="http://agigen.se/wp-content/themes/agigen_v3/images/favicon.ico"/>
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+        <meta property="og:title" content="Agigen 2013 - A year in review">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Agigen 2013">
+        <meta property="og:description" content="A year in review. A summary of all the glory we achieved during 2013.">
+        <meta property="og:url"   content="http://2013.agigen.se">
+        <meta property="og:image" content="http://2013.agigen.se/img/og.png">
+        <meta property="fb:admins" content="562883652">
+        
+        
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <header class="main-header">
+        <header class="agigen-section main-header">
             <h1>Agigen 2013</h1>
+            <h2 class="agigen-section__subheader">A year in review</h2>
         </header>
         
         <?php
         foreach ($events as $event):
         ?>
-        <section class="agigen-section">
+        <section class="agigen-section"
+        <?php if (isset($event->img)): ?> style="background-image: url(/img/events/<?php echo $event->img ?>)" <?php endif ?> 
+        >
             <div class="agigen-section__container">
                 
                 <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
+                <?php if (isset($event->caption)): ?>
+                    <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
+                <?php endif ?>
                 
             </div>
         </section>
