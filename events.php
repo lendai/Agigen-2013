@@ -1,47 +1,62 @@
 <?php
 $events = array(
     (object)array(
-        'title' => "World's first hockey puck shooting machine",
-        'when' => 'February 2013'
+        'title' => "Oddset Hockey Games",
+        'caption' => "World's first hockey puck shooting machine",
+        'when' => 'February 2013',
+        'img' => 'oddset.jpg',
+        'video' => 'http://vimeo.com/61710166'
     ),
-    
+    (object)array(
+        'title' => "Picard.se",
+        'caption' => "We helped launch the site for the French food company Picard",
+        'when' => 'February 2013',
+        'img' => 'picard.jpg',
+        'link' => (object)array('url' => 'http://www.picard.se/', 'title' => 'Visit the site'),
+    ),
     (object)array(
         'title' => 'The Big Blog Exchange',
         'when' => 'February 2013',
         'video' => 'http://www.youtube.com/watch?v=hos7_HYxGeE',
-        'link' => 'http://www.bigblogexchange.org/',
+        'link' => (object)array('url' => 'http://www.bigblogexchange.org/', 'title' => 'Visit the site'),
         'img' => 'bigblog.gif'
 
     ),
     
     (object)array(
         'title' => 'Netflix - The Flixies',
+        'caption' => "Netflix's own take on the Oscars",
         'when' => 'March 2013',
         'video' => 'http://www.youtube.com/watch?v=v5NtNn43NW4',
         'img' => 'flixies.jpg'
         
     ),
+    // (object)array(
+    //     'title' => 'bear.sh',
+    //     'when' => 'March 2013'
+    // ),
     (object)array(
-        'title' => 'bear.sh',
-        'when' => 'March 2013'
-    ),
-    (object)array(
-        'title' => 'Miriam joined Agigen',
-        'when' => 'March 2013'
+        'title' => 'Miriam',
+        'caption' => 'joined Agigen',
+        'when' => 'March 2013',
+        'img' => 'mia.jpg'
     ),
     
     (object)array(
         'award' => true,
-        'title' => 'Webby Awards - Best online campaign 2012: Build with Chrome',
+        'title' => 'Webby Awards',
+        'caption' => 'Best online campaign 2012: Build with Chrome',
         'when' => 'May 2:nd',
-        'link' => 'http://winners.webbyawards.com/2013/interactive-advertising-media/campaign-categories/online-campaigns/build-with-chrome'
+        'link' => (object)array('url' => 'http://winners.webbyawards.com/2013/interactive-advertising-media/campaign-categories/online-campaigns/build-with-chrome', 'title' => 'Read about it'),
     ),
     
     
     (object)array(
         'title' => "Carlsberg - Where's the party featuring Axwell",
         'when' => 'May 10:th',
-        'img' => 'carlsberg.jpg'
+        'img' => 'carlsberg.jpg',
+        'link' => (object)array('url' => 'httphttp://www.where-is-the-party.com', 'title' => 'Visit the site'),
+        
     ),
     (object)array(
         'title' => 'Released Shroomify',
@@ -50,7 +65,8 @@ $events = array(
     ), 
     (object)array(
         'title' => 'Billogram - #FemOrd',
-        'when' => 'May 2013'
+        'when' => 'May 2013',
+        'img' => 'femord.jpg'
     ),
     (object)array(
         'title' => 'Annual BBQ-party',
@@ -63,7 +79,8 @@ $events = array(
         'img' => 'new-office-lease.jpg'
     ),
     (object)array(
-        'title' => 'Max joined Agigen',
+        'title' => 'Max',
+        'caption' => 'joined Agigen',
         'when' => 'August 2013',
         'img' => 'max-joined.jpg'
     ),
@@ -85,32 +102,41 @@ $events = array(
         'link' => 'http://blog.agigen.se/2013/10/reoffice/'
     ),
     (object)array(
-        'title' => 'The Hobbit 2 - A journey through Middle-earth',
-        'link' => 'http://middle-earth.thehobbit.com/'
+        'title' => 'The Hobbit - A journey through Middle-earth',
+        'caption' => 'A Google Chrome Experiment',
+        'link' => (object)array('title' => 'Visit the site', 'url' => 'http://middle-earth.thehobbit.com/'),
+        'video' => 'http://www.youtube.com/watch?v=BVvMGD8LNL0'
     ),
     (object)array(
-        'title' => 'Oscar joined Agigen'
+        'title' => 'Oscar',
+        'caption' => 'joined Agigen',
+        'img' => 'oscar.jpg'
     ),
     (object)array(
         'title' => 'Our new site released',
         'when' => 'November 2013',
-        'link' => 'http://agigen.se'
+        'link' => (object)array('url' => 'http://agigen.se', 'title' => 'agigen.se')
     ),
     (object)array(
-        'title' => 'Therese joined Agigen',
-        'when' => 'December 2013'
+        'title' => 'Therese',
+        'caption' => 'joined Agigen',
+        'when' => 'December 2013',
+        'img' => 'therese.jpg'
     ),
     (object)array(
-        'title' => 'Victor joined Agigen',
-        'when' => 'December 2013'
+        'title' => 'Viktor',
+        'caption' => 'joined Agigen',
+        'when' => 'December 2013',
+        'img' => 'viktor.jpg'
     ),
     (object)array(
         'title' => 'Agigen moving in party',
         'when' => '4:th of december 2013',
+        'img' => 'party.jpg'
     ),
-    (object)array(
-        'title' => 'FuckMyHistory.com',
-    ),
+    // (object)array(
+    //     'title' => 'FuckMyHistory.com',
+    // ),
     (object)array(
         'title' => 'Sandhamn'
     ),

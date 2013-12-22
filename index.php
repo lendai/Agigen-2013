@@ -29,7 +29,7 @@ require 'events.php';
     <body>
         <header class="agigen-section main-header vc-container">
             <div class="vc">
-                <h1>Agigen 2013</h1>
+                <h1 class="agigen-section__header">Agigen 2013</h1>
                 <h2 class="agigen-section__subheader">A year in review</h2>
             </div>
         </header>
@@ -48,13 +48,28 @@ require 'events.php';
                     <?php if (isset($event->caption)): ?>
                         <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
                     <?php endif ?>
+                    
+                    <div class="agigen-section__related">
+                        
+                        <?php if (isset($event->link)): ?>
+                            <a class="agigen-btn" href="<?php echo $event->link->url ?>"><?php echo $event->link->title ?></a>
+                        <?php endif ?>
+                        <?php if (isset($event->video)): ?>
+                            <a class="agigen-btn" href="<?php echo $event->video ?>">Watch the video</a>
+                        <?php endif ?>
+                        
+                        
+                        
+                    </div>
+                    
+                    
                 </div>
             </div>
         </section>
         <?php
         endforeach;
         ?>
-        <footer>
+        <footer class="agigen-section">
             <p>
             &bull; 2014<br>
             &bull; ?????<br>
