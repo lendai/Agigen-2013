@@ -65,7 +65,8 @@ $events = array(
     ), 
     (object)array(
         'title' => 'Billogram - #FemOrd',
-        'when' => 'May 2013'
+        'when' => 'May 2013',
+        'img' => 'femord.jpg'
     ),
     (object)array(
         'title' => 'Annual BBQ-party',
@@ -108,8 +109,8 @@ $events = array(
     ),
     (object)array(
         'title' => 'Oscar',
-        'caption' => 'joined Agigen'
-        
+        'caption' => 'joined Agigen',
+        'img' => 'oscar.jpg'
     ),
     (object)array(
         'title' => 'Our new site released',
@@ -133,9 +134,9 @@ $events = array(
         'when' => '4:th of december 2013',
         'img' => 'party.jpg'
     ),
-    (object)array(
-        'title' => 'FuckMyHistory.com',
-    ),
+    // (object)array(
+    //     'title' => 'FuckMyHistory.com',
+    // ),
     (object)array(
         'title' => 'Sandhamn'
     ),

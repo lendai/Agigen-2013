@@ -52,7 +52,7 @@ require 'events.php';
                     <div class="agigen-section__related">
                         
                         <?php if (isset($event->link)): ?>
-                            <a href="<?php echo $event->link->url ?>"><?php echo $event->link->title ?></a>
+                            <a class="agigen-btn" href="<?php echo $event->link->url ?>"><?php echo $event->link->title ?></a>
                         <?php endif ?>
                         <?php if (isset($event->video)): ?>
                             <a class="agigen-btn" href="<?php echo $event->video ?>">Watch the video</a>
