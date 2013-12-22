@@ -8,6 +8,9 @@ require 'events.php';
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css?_=<?php echo time() ?>">
+        
         <title>Agigen 2013</title>
         <meta name="description" content="Agigen 2013 - A year in review">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,13 +23,12 @@ require 'events.php';
         <meta property="og:url"   content="http://2013.agigen.se">
         <meta property="og:image" content="http://2013.agigen.se/img/og.png">
         <meta property="fb:admins" content="562883652">
-        
-        
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+    <div id="skrollr-body">
+        
         <header class="agigen-section main-header vc-container">
             <div class="vc">
                 <h1 class="agigen-section__header">Agigen 2013</h1>
@@ -34,68 +36,69 @@ require 'events.php';
             </div>
         </header>
         
-        <?php
-        foreach ($events as $event):
-        ?>
-        <section class="agigen-section"
-        style="
-        <?php if (isset($event->img)): ?>background-image: url(/img/events/<?php echo $event->img ?>); <?php endif ?> 
-        <?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?> 
-        "
-        data-center-center="filter: grayscale(0%);"
-        data-top-center="filter: grayscale(100%);"
-        >
-            <div class="agigen-section__container vc-container">
-                <div class="vc">
-                    <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
-                    <?php if (isset($event->caption)): ?>
-                        <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
-                    <?php endif ?>
-                    
-                    <div class="agigen-section__related">
-                        
-                        <?php if (isset($event->link)): ?>
-                            <a class="agigen-btn" href="<?php echo $event->link->url ?>"><?php echo $event->link->title ?></a>
-                        <?php endif ?>
-                        <?php if (isset($event->video)): ?>
-                            <a class="agigen-btn" href="<?php echo $event->video ?>">Watch the video</a>
+            <?php
+            foreach ($events as $event):
+            ?>
+            <section class="agigen-section"
+            style="
+            <?php if (isset($event->img)): ?>background-image: url(/img/events/<?php echo $event->img ?>); <?php endif ?> 
+            <?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?> 
+            "
+            data-center-center="filter: grayscale(0%);"
+            data-top-center="filter: grayscale(100%);"
+            >
+                <div class="agigen-section__container vc-container">
+                    <div class="vc">
+                        <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
+                        <?php if (isset($event->caption)): ?>
+                            <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
                         <?php endif ?>
                         
+                        <div class="agigen-section__related">
+                            
+                            <?php if (isset($event->link)): ?>
+                                <a class="agigen-btn" href="<?php echo $event->link->url ?>"><?php echo $event->link->title ?></a>
+                            <?php endif ?>
+                            <?php if (isset($event->video)): ?>
+                                <a class="agigen-btn" href="<?php echo $event->video ?>">Watch the video</a>
+                            <?php endif ?>
+                            
+                            
+                            
+                        </div>
                         
                         
                     </div>
-                    
-                    
                 </div>
-            </div>
-        </section>
-        <?php
-        endforeach;
-        ?>
-        <footer class="agigen-section">
-            <p>
-            &bull; 2014<br>
-            &bull; ?????<br>
-            &bull; PROFIT
-            </p>
-            
-            <p>
-                Want to join the <a href="http://agigen.se">best company in the world</a>? Send an email to <a href="mailto:daniel@agigen.se">daniel@agigen.se</a>
-            </p>
+            </section>
+            <?php
+            endforeach;
+            ?>
+            <footer class="agigen-section">
+                <p>
+                &bull; 2014<br>
+                &bull; ?????<br>
+                &bull; PROFIT
+                </p>
+                
+                <p>
+                    Want to join the <a href="http://agigen.se">best company in the world</a>? Send an email to <a href="mailto:daniel@agigen.se">daniel@agigen.se</a>
+                </p>
 
-            <p>
-                And at last;<br>
-                from all of us, to all of you. A merry merry christmas!
-            </p>
-            
-        </footer>
+                <p>
+                    And at last;<br>
+                    from all of us, to all of you. A merry merry christmas!
+                </p>
+                
+            </footer>
+        </div>
         
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/skrollr.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/main.js?_=<?php echo time() ?>"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
