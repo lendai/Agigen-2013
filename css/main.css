@@ -117,6 +117,7 @@ p,ul,ol,li {
    position: relative;
    text-align: center;
    background-size: cover;
+   background-position: top center;
 }
 
 .agigen-section__header {
