@@ -27,14 +27,42 @@
 $events = array(
     
     (object)array(
-        'title' => 'hockeymaskin'
+        'title' => "World's first hockey puck shooting machine",
+        'when' => 'February 2013'
     ),
     (object)array(
-        'title' => 'miriam började'
+        'title' => 'the flixies',
+        'when' => 'March 2013'
+    ),
+    
+    // (object)array(
+    //     'title' => 'ny dörr',
+    //     'when' => 'March 2013'
+    // ),
+    (object)array(
+        'title' => 'bear.sh',
+        'when' => 'March 2013'
     ),
     (object)array(
-        'title' => 'carlsberg'
+        'title' => 'Miriam joined Agigen',
+        'when' => 'March 2013'
     ),
+    (object)array(
+        'title' => "Carlsberg - Where's the party featuring Axwell",
+        'when' => 'May 10:th'
+    ),
+    (object)array(
+        'title' => 'Released Shroomify',
+        'when' => 'May 2013',
+        'link' => 'http://dev.agigen.se/shroomify.html'
+    ), 
+        
+    
+    (object)array(
+        'title' => 'Billogram - #FemOrd',
+        'when' => 'May 2013'
+    ),
+    
     (object)array(
         'title' => 'hobbit'
     ),
