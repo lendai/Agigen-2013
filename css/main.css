@@ -120,6 +120,7 @@ p,ul,ol,li {
    text-align: center;
    background-size: cover;
    background-position: center center;
+   overflow: hidden;
 }
 
 a {
