@@ -36,12 +36,18 @@ require 'events.php';
                 </div>
             </header>
             <?php foreach ($events as $event): ?>
-                <section class="agigen-section"
-                style="<?php if (isset($event->img)): ?>background-image: url(/img/events/<?php echo $event->img ?>); <?php endif ?>
-                       <?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?>
-                       <?php if (isset($event->bgcolor)): ?>background-color: <?php echo $event->bgcolor ?>; <?php endif ?>"
-                data-center-center="filter: grayscale(0%);"
-                data-top-center="filter: grayscale(100%);">
+                <section class="agigen-section
+                                <?php if (isset($event->img)): ?>agigen-section--background-image<?php endif ?>
+                                <?php if (isset($event->color)): ?>agigen-section--color<?php endif ?>"
+                         style="<?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?>
+                                <?php if (isset($event->bgcolor)): ?>background-color: <?php echo $event->bgcolor ?>; <?php endif ?>"
+                >
+                    <?php if (isset($event->img)): ?>
+                        <div class="agigen-section__background" style="background-image: url(/img/events/<?php echo $event->img ?>);"></div>
+                        <div class="agigen-section__background agigen-section__background--past" style="background-image: url(/img/events/<?php echo $event->img ?>);"
+                             data-center-center="opacity: 0;"
+                             data-top-center="opacity: 1;"></div>
+                    <?php endif ?>
                     <div class="agigen-section__container vc-container">
                         <div class="vc">
                             <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
