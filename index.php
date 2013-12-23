@@ -26,7 +26,7 @@ include 'events.php';
         <meta property="og:image" content="http://2013.agigen.se/img/og.png">
         <meta property="fb:admins" content="562883652">
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/modernizr-custom.min.js"></script>
     </head>
     <body>
         <div id="skrollr-body">

@@ -146,6 +146,10 @@ p,ul,ol,li {
     transform: translateZ(0);
 }
 
+.no-cssfilters .agigen-section__background--past {
+    display: none !important;
+}
+
 a {
     color: white;
     text-decoration: none;
