@@ -11,7 +11,7 @@ require 'events.php';
         <link rel="stylesheet" href="css/normalize.css">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css?_=<?php echo time() ?>">
-        
+
         <title>Agigen 2013</title>
         <meta name="description" content="Agigen 2013 - A year in review">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,116 +28,103 @@ require 'events.php';
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-    <div id="skrollr-body">
-        
-        <header class="agigen-section main-header vc-container">
-            <div class="vc">
-                <h1 class="agigen-section__header">Agigen 2013</h1>
-                <h2 class="agigen-section__subheader">A year in review</h2>
-            </div>
-        </header>
-        
-            <?php
-            foreach ($events as $event):
-            ?>
-            <section class="agigen-section"
-            style="
-            <?php if (isset($event->img)): ?>background-image: url(/img/events/<?php echo $event->img ?>); <?php endif ?> 
-            <?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?> 
-            <?php if (isset($event->bgcolor)): ?>background-color: <?php echo $event->bgcolor ?>; <?php endif ?> 
-            "
-            data-center-center="filter: grayscale(0%);"
-            data-top-center="filter: grayscale(100%);"
-            >
-                <div class="agigen-section__container vc-container">
-                    <div class="vc">
-                        <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
-                        <?php if (isset($event->caption)): ?>
-                            <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
-                        <?php endif ?>
-                        
-                        <div class="agigen-section__related">
-                            
-                            <?php if (isset($event->link)): ?>
-                                <?php if (!is_array($event->link)) { $event->link = array($event->link); } ?>
-                                <?php foreach ($event->link as $l): ?>
-                                    <a class="agigen-btn" href="<?php echo $l->url ?>" 
-                                        target="_blank"
-                                        style="
-                                    <?php if (isset($l->bgcolor)) echo 'background-color: ' . $l->bgcolor . '; ';  ?>
-                                    <?php if (isset($l->color)) echo 'color: ' . $l->color . '; ';  ?>
-                                        "><?php echo $l->title ?></a>                                    
-                                <?php endforeach ?>
+        <div id="skrollr-body">
+            <header class="agigen-section main-header vc-container">
+                <div class="vc">
+                    <h1 class="agigen-section__header">Agigen 2013</h1>
+                    <h2 class="agigen-section__subheader">A year in review</h2>
+                </div>
+            </header>
+            <?php foreach ($events as $event): ?>
+                <section class="agigen-section"
+                style="<?php if (isset($event->img)): ?>background-image: url(/img/events/<?php echo $event->img ?>); <?php endif ?>
+                       <?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?>
+                       <?php if (isset($event->bgcolor)): ?>background-color: <?php echo $event->bgcolor ?>; <?php endif ?>"
+                data-center-center="filter: grayscale(0%);"
+                data-top-center="filter: grayscale(100%);">
+                    <div class="agigen-section__container vc-container">
+                        <div class="vc">
+                            <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
+                            <?php if (isset($event->caption)): ?>
+                                <h3 class="agigen-section__subheader"><?php echo $event->caption ?></h3>
                             <?php endif ?>
-                            <?php if (isset($event->video)): ?>
-                                <a class="agigen-btn" href="<?php echo $event->video ?>">Watch the video</a>
-                            <?php endif ?>
+
+                            <div class="agigen-section__related">
+                                <?php if (isset($event->link)): ?>
+                                    <?php if (!is_array($event->link)) { $event->link = array($event->link); } ?>
+                                    <?php foreach ($event->link as $l): ?>
+                                        <a class="agigen-btn" href="<?php echo $l->url ?>"
+                                            target="_blank"
+                                            style="
+                                        <?php if (isset($l->bgcolor)) echo 'background-color: ' . $l->bgcolor . '; ';  ?>
+                                        <?php if (isset($l->color)) echo 'color: ' . $l->color . '; ';  ?>
+                                            "><?php echo $l->title ?></a>
+                                    <?php endforeach ?>
+                                <?php endif ?>
+                                <?php if (isset($event->video)): ?>
+                                    <a class="agigen-btn" href="<?php echo $event->video ?>">Watch the video</a>
+                                <?php endif ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <?php if (isset($event->bgvideo)): ?>
-                    <video class="agigen-section__bgvideo" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-                        <source src="video/<?php echo $event->bgvideo ?>.mp4" type="video/mp4">
-                        <source src="video/<?php echo $event->bgvideo ?>.webm" type="video/webm">
-                    </video>
-                <?php endif ?>
-                
-            </section>
-            <?php
-            endforeach;
-            ?>
-            <section class="agigen-section footer-section">
-            <footer class="agigen-section__container vc-container">
-                <div class="vc footer-content">
-                    <p>
-                        Want to join the <a href="http://agigen.se">best company in the world</a>?<br>
-                        <a class="agigen-btn" href="mailto:jobs@agigen.se">
-                            <i class="fa fa-envelope"></i> jobs@agigen.se
-                        </a>
-                    </p>
-                    <p>
-                        Or get world-class developers on your next project?<br>
-                        <a href="mailto:business@agigen.se" class="agigen-btn">
-                            <i class="fa fa-thumbs-up"></i> business@agigen.se
-                        </a>
-                        
-                    </p>
-                    
-                    <p>
-                        And at last; from all of us, to all of you. <br>
-                        <strong class="avantgarde"><i class="fa fa-star-o"></i> A merry merry christmas, and a happy new year! <i class="fa fa-heart-o"></i></strong>
-                    </p>
-                    
-                    <div class="fb-like" 
-                         data-href="http://2013.agigen.se/" 
-                         data-layout="box_count" 
-                         data-colorscheme="light" 
-                         data-action="like" 
-                         data-show-faces="false" 
-                         data-share="false"></div>
-<?php
-/*
 
-                    <p class="agigen-sharing">
-                        <a href="" class="agigen-sharing__item agigen-sharing__item--facebook">
-                            <i class="fa fa-facebook-square"></i>
-                        </a>
-                        <a href="" class="agigen-sharing__item agigen-sharing__item--googleplus">
-                            <i class="fa fa-google-plus-square"></i>
-                        </a>
-                        <a href="" class="agigen-sharing__item agigen-sharing__item--twitter">
-                            <i class="fa fa-twitter-square"></i>
-                        </a>                        
-                    </p>
-                    */
-                    ?>                    
+                    <?php if (isset($event->bgvideo)): ?>
+                        <video class="agigen-section__bgvideo" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                            <source src="video/<?php echo $event->bgvideo ?>.mp4" type="video/mp4">
+                            <source src="video/<?php echo $event->bgvideo ?>.webm" type="video/webm">
+                        </video>
+                    <?php endif ?>
+                </section>
+            <?php endforeach; ?>
+            <section class="agigen-section agigen-section--footer">
+                <footer class="agigen-section__container vc-container">
+                    <div class="vc footer-content">
+                        <p>
+                            Want to join the <a href="http://agigen.se">best company in the world</a>?<br>
+                            <a class="agigen-btn" href="mailto:jobs@agigen.se">
+                                <i class="fa fa-envelope"></i> jobs@agigen.se
+                            </a>
+                        </p>
 
-                </div>
-            </footer>
+                        <p>
+                            Or get world-class developers on your next project?<br>
+                            <a href="mailto:business@agigen.se" class="agigen-btn">
+                                <i class="fa fa-thumbs-up"></i> business@agigen.se
+                            </a>
+                        </p>
+
+                        <p>
+                            And at last; from all of us, to all of you. <br>
+                            <strong class="avantgarde"><i class="fa fa-star-o"></i> A merry merry christmas, and a happy new year! <i class="fa fa-heart-o"></i></strong>
+                        </p>
+
+                        <div class="fb-like" 
+                             data-href="http://2013.agigen.se/"
+                             data-layout="box_count"
+                             data-colorscheme="light"
+                             data-action="like"
+                             data-show-faces="false"
+                             data-share="false"></div>
+
+                        <?php /*
+
+                        <p class="agigen-sharing">
+                            <a href="" class="agigen-sharing__item agigen-sharing__item--facebook">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a href="" class="agigen-sharing__item agigen-sharing__item--googleplus">
+                                <i class="fa fa-google-plus-square"></i>
+                            </a>
+                            <a href="" class="agigen-sharing__item agigen-sharing__item--twitter">
+                                <i class="fa fa-twitter-square"></i>
+                            </a>
+                        </p>
+
+                        */ ?>
+                    </div>
+                </footer>
             </section>
         </div>
-        
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
