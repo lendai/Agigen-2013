@@ -2,7 +2,8 @@
     "use strict";
 
     $(window).on('resize', function() {
-        $('.agigen-section').height(window.innerHeight)
+        $('.agigen-section__container').height(window.innerHeight)
+        $('.agigen-section').height(window.innerHeight*1.2)
     }).trigger('resize')
 
     skrollr.init({
