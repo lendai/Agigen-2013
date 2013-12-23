@@ -1,5 +1,5 @@
 <?php
-require 'events.php';
+include 'events.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -10,7 +10,8 @@ require 'events.php';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="css/normalize.css">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css?_=<?php echo time() ?>">
+        <link rel="stylesheet" href="css/main.<?php echo filemtime('css/main.css') ?>.css">
+        <link rel="dns-prefetch" href="//ajax.googleapis.com">
 
         <title>Agigen 2013</title>
         <meta name="description" content="Agigen 2013 - A year in review">
@@ -36,6 +37,7 @@ require 'events.php';
                 </div>
             </header>
             <?php foreach ($events as $event): ?>
+
                 <section class="agigen-section
                                 <?php if (isset($event->img)): ?>agigen-section--background-image<?php endif ?>
                                 <?php if (isset($event->color)): ?>agigen-section--color<?php endif ?>"
@@ -80,8 +82,11 @@ require 'events.php';
                             <source src="video/<?php echo $event->bgvideo ?>.webm" type="video/webm">
                         </video>
                     <?php endif ?>
+
                 </section>
+
             <?php endforeach; ?>
+
             <section class="agigen-section agigen-section--footer">
                 <footer class="agigen-section__container vc-container">
                     <div class="vc footer-content">
@@ -135,8 +140,14 @@ require 'events.php';
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
-        <script src="js/skrollr.js"></script>
-        <script src="js/main.js?_=<?php echo time() ?>"></script>
+        <?php if (true): /* inline small js? */ ?>
+            <script type="text/javascript">
+                <?php echo file_get_contents('js/main.js') ?>
+            </script>
+        <?php else: ?>
+            <script src="js/main.<?php echo filemtime('js/main.js') ?>.js"></script>
+        <?php endif ?>
+
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
