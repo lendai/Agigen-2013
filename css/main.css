@@ -141,6 +141,9 @@ p,ul,ol,li {
     opacity: 0;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
+
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 a {
