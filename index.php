@@ -9,6 +9,7 @@ require 'events.php';
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="css/normalize.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css?_=<?php echo time() ?>">
         
         <title>Agigen 2013</title>
@@ -43,6 +44,7 @@ require 'events.php';
             style="
             <?php if (isset($event->img)): ?>background-image: url(/img/events/<?php echo $event->img ?>); <?php endif ?> 
             <?php if (isset($event->color)): ?>color: <?php echo $event->color ?>; <?php endif ?> 
+            <?php if (isset($event->bgcolor)): ?>background-color: <?php echo $event->bgcolor ?>; <?php endif ?> 
             "
             data-center-center="filter: grayscale(0%);"
             data-top-center="filter: grayscale(100%);"
@@ -57,40 +59,83 @@ require 'events.php';
                         <div class="agigen-section__related">
                             
                             <?php if (isset($event->link)): ?>
-                                <a class="agigen-btn" href="<?php echo $event->link->url ?>"><?php echo $event->link->title ?></a>
+                                <?php if (!is_array($event->link)) { $event->link = array($event->link); } ?>
+                                <?php foreach ($event->link as $l): ?>
+                                    <a class="agigen-btn" href="<?php echo $l->url ?>" 
+                                        target="_blank"
+                                        style="
+                                    <?php if (isset($l->bgcolor)) echo 'background-color: ' . $l->bgcolor . '; ';  ?>
+                                    <?php if (isset($l->color)) echo 'color: ' . $l->color . '; ';  ?>
+                                        "><?php echo $l->title ?></a>                                    
+                                <?php endforeach ?>
                             <?php endif ?>
                             <?php if (isset($event->video)): ?>
                                 <a class="agigen-btn" href="<?php echo $event->video ?>">Watch the video</a>
                             <?php endif ?>
-                            
-                            
-                            
                         </div>
-                        
-                        
                     </div>
                 </div>
+                
+                <?php if (isset($event->bgvideo)): ?>
+                    <video class="agigen-section__bgvideo" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                        <source src="video/<?php echo $event->bgvideo ?>.mp4" type="video/mp4">
+                        <source src="video/<?php echo $event->bgvideo ?>.webm" type="video/webm">
+                    </video>
+                <?php endif ?>
+                
             </section>
             <?php
             endforeach;
             ?>
-            <footer class="agigen-section">
-                <p>
-                &bull; 2014<br>
-                &bull; ?????<br>
-                &bull; PROFIT
-                </p>
-                
-                <p>
-                    Want to join the <a href="http://agigen.se">best company in the world</a>? Send an email to <a href="mailto:daniel@agigen.se">daniel@agigen.se</a>
-                </p>
+            <section class="agigen-section footer-section">
+            <footer class="agigen-section__container vc-container">
+                <div class="vc footer-content">
+                    <p>
+                        Want to join the <a href="http://agigen.se">best company in the world</a>?<br>
+                        <a class="agigen-btn" href="mailto:jobs@agigen.se">
+                            <i class="fa fa-envelope"></i> jobs@agigen.se
+                        </a>
+                    </p>
+                    <p>
+                        Or get world-class developers on your next project?<br>
+                        <a href="mailto:business@agigen.se" class="agigen-btn">
+                            <i class="fa fa-thumbs-up"></i> business@agigen.se
+                        </a>
+                        
+                    </p>
+                    
+                    <p>
+                        And at last; from all of us, to all of you. <br>
+                        <strong class="avantgarde"><i class="fa fa-star-o"></i> A merry merry christmas, and a happy new year! <i class="fa fa-heart-o"></i></strong>
+                    </p>
+                    
+                    <div class="fb-like" 
+                         data-href="http://2013.agigen.se/" 
+                         data-layout="box_count" 
+                         data-colorscheme="light" 
+                         data-action="like" 
+                         data-show-faces="false" 
+                         data-share="false"></div>
+<?php
+/*
 
-                <p>
-                    And at last;<br>
-                    from all of us, to all of you. A merry merry christmas!
-                </p>
-                
+                    <p class="agigen-sharing">
+                        <a href="" class="agigen-sharing__item agigen-sharing__item--facebook">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="" class="agigen-sharing__item agigen-sharing__item--googleplus">
+                            <i class="fa fa-google-plus-square"></i>
+                        </a>
+                        <a href="" class="agigen-sharing__item agigen-sharing__item--twitter">
+                            <i class="fa fa-twitter-square"></i>
+                        </a>                        
+                    </p>
+                    */
+                    ?>                    
+
+                </div>
             </footer>
+            </section>
         </div>
         
 
@@ -99,15 +144,22 @@ require 'events.php';
         <script src="js/plugins.js"></script>
         <script src="js/skrollr.js"></script>
         <script src="js/main.js?_=<?php echo time() ?>"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create', 'UA-7546376-6', 'agigen.se');
+            ga('send','pageview');
         </script>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=189436057913205";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     </body>
 </html>

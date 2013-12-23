@@ -12,6 +12,7 @@ $events = array(
         'caption' => "We helped launch the site for the French food company Picard",
         'when' => 'February 2013',
         'img' => 'picard.jpg',
+        'color' => '#111',
         'link' => (object)array('url' => 'http://www.picard.se/', 'title' => 'Visit the site'),
     ),
     (object)array(
@@ -19,7 +20,7 @@ $events = array(
         'when' => 'February 2013',
         'video' => 'http://www.youtube.com/watch?v=hos7_HYxGeE',
         'link' => (object)array('url' => 'http://www.bigblogexchange.org/', 'title' => 'Visit the site'),
-        'img' => 'bigblog.gif'
+        'img' => 'bigblog.jpg'
 
     ),
     
@@ -37,7 +38,7 @@ $events = array(
     // ),
     (object)array(
         'title' => 'Miriam',
-        'caption' => 'joined Agigen',
+        'caption' => 'Our new project manager joined Agigen',
         'when' => 'March 2013',
         'img' => 'mia.jpg'
     ),
@@ -48,12 +49,14 @@ $events = array(
         'caption' => 'Best online campaign 2012: Build with Chrome',
         'when' => 'May 2:nd',
         'link' => (object)array('url' => 'http://winners.webbyawards.com/2013/interactive-advertising-media/campaign-categories/online-campaigns/build-with-chrome', 'title' => 'Read about it'),
+        'img' => 'webby-build.jpg'
     ),
     (object)array(
-        'title' => "Carlsberg - Where's the party featuring Axwell",
+        'title' => "Carlsberg",
+        'caption' => "Where's the party featuring Axwell",
         'when' => 'May 10:th',
-        'img' => 'carlsberg.jpg',
-        'link' => (object)array('url' => 'httphttp://www.where-is-the-party.com', 'title' => 'Visit the site'),
+        'img' => 'carlsberg2.jpg',
+        'link' => (object)array('url' => 'http://www.where-is-the-party.com', 'title' => 'Visit the site'),
         
     ),
     // (object)array(
@@ -62,20 +65,27 @@ $events = array(
     //     'link' => 'http://dev.agigen.se/shroomify.html'
     // ), 
     (object)array(
-        'title' => 'Billogram - #FemOrd',
+        'title' => '#FemOrd',
+        'caption' => 'An inspirational campaign for Billogram',
         'when' => 'May 2013',
-        'img' => 'femord.jpg'
+        'img' => 'femord.jpg',
+        'color' => '#111',
+        'link' => (object)array('url' => 'http://femord.se/', 'title' => 'Visit the site'),
+        
+        
     ),
     (object)array(
         'title' => 'Annual BBQ-party',
+        'caption' => 'Teambuilding and <a href="http://en.wikipedia.org/wiki/Kubb">Kubb</a>',
         'when' => 'May 2013',
         'img' => 'june-bbq.jpg'
     ),
     (object)array(
-        'title' => 'New office',
+        'title' => 'Signed the lease',
         'caption' => 'We signed the lease to a new office - three times as large as the old one.',
         'when' => 'July 2013',
-        'img' => 'new-office-lease.jpg'
+        'color' => '#000',
+        'img' => 'new-office-lease2.jpg'
     ),
     (object)array(
         'title' => 'Max',
@@ -85,7 +95,8 @@ $events = array(
     ),
     (object)array(
         'award' => true,
-        'title' => "FWA Site of the day - Where's the party",
+        'title' => "FWA Site of the day",
+        'caption' => "Another award for Where's the party",
         'link' => (object)array('title' => 'Visit the site', 'url' => 'http://www.thefwa.com/site/where-s-the-party-by-carlsberg'),
         'when' => 'September 2013',
         'img' => 'fwa.jpg'
@@ -102,8 +113,8 @@ $events = array(
         'link' => (object)array('url' => 'http://blog.agigen.se/2013/10/reoffice/', 'title' => 'Read the blog post')
     ),
     (object)array(
-        'title' => 'The Hobbit - A journey through Middle-earth',
-        'caption' => 'A Google Chrome Experiment',
+        'title' => 'The Hobbit',
+        'caption' => 'A journey through Middle-earth',
         'link' => (object)array('title' => 'Visit the site', 'url' => 'http://middle-earth.thehobbit.com/'),
         'video' => 'http://www.youtube.com/watch?v=BVvMGD8LNL0',
         'img' => 'hobbit.jpg'
@@ -116,7 +127,7 @@ $events = array(
     (object)array(
         'title' => 'Our new site released',
         'when' => 'November 2013',
-        'link' => (object)array('url' => 'http://agigen.se', 'title' => 'agigen.se'),
+        'link' => (object)array('url' => 'http://agigen.se', 'title' => 'Visit agigen.se', 'bgcolor' => '#bd0000', 'color' => 'white'),
         'img' => 'agigensite.jpg',
         'color' => '#000'
     ),
@@ -132,8 +143,21 @@ $events = array(
         'when' => 'December 2013',
         'img' => 'viktor.jpg'
     ),
+    
     (object)array(
-        'title' => 'Agigen moving in party',
+        'award' => true,
+        'title' => "FWA Cutting Edge",
+        'caption' => 'Project of the Week -A Journey Through Middle-earth',
+        'link' => array(
+            (object)array('title' => 'Read the review', 'url' => 'http://www.thefwa.com/adobe/tcea/a-journey-through-middle-earth'),
+            (object)array('title' => 'Visit the site', 'url' => 'http://middle-earth.thehobbit.com')
+        ),
+        'when' => 'September 2013',
+        'img' => 'fwa.jpg'
+    ),
+    
+    (object)array(
+        'title' => 'Moving in party',
         'caption' => 'about 150 people enjoying beer, tacos and great web development',
         'when' => '4:th of december 2013',
         'img' => 'party.jpg'
@@ -142,10 +166,18 @@ $events = array(
     //     'title' => 'FuckMyHistory.com',
     // ),
     (object)array(
-        'title' => 'Sandhamn'
+        'title' => 'Sandhamn',
+        'img' => 'sandhamn.jpg',
+        'caption' => 'A relaxing end to a hectic year'
     ),
     (object)array(
         'title' => '2013 in numbers'
+    ),
+    (object)array(
+        'title' => '2014',
+        'caption' => '&bull; Code some stuff<br>&bull; Design some sites<br>&bull; ?????<br>&bull; Profit.',
+        'bgvideo' => 'fireworks',
+        'bgcolor' => '#000'
     ),
 
 );
