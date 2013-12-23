@@ -168,14 +168,17 @@ $events = array(
     (object)array(
         'title' => 'Sandhamn',
         'img' => 'sandhamn.jpg',
-        'caption' => 'A relaxing end to a hectic year'
+        'caption' => 'The relaxing end to a hectic year'
     ),
-    (object)array(
-        'title' => '2013 in numbers'
-    ),
+    // (object)array(
+    //     'title' => '2013 in numbers',
+    //     'bgcolor' => '#efec12',
+    //     'color' => 'white'
+    // ),
     (object)array(
         'title' => '2014',
         'caption' => '&bull; Code some stuff<br>&bull; Design some sites<br>&bull; ?????<br>&bull; Profit.',
+        'caption' => "A yet to be discovered adventure",
         'bgvideo' => 'fireworks',
         'bgcolor' => '#000'
     ),
