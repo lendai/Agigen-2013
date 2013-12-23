@@ -30,10 +30,12 @@ include 'events.php';
     </head>
     <body>
         <div id="skrollr-body">
-            <header class="agigen-section main-header vc-container">
-                <div class="vc">
-                    <h1 class="agigen-section__header">Agigen 2013</h1>
-                    <h2 class="agigen-section__subheader">A year in review</h2>
+            <header class="agigen-section agigen-section--main-header">
+                <div class="agigen-section__container vc-container">
+                    <div class="vc">
+                        <h1 class="agigen-section__header">Agigen 2013</h1>
+                        <h2 class="agigen-section__subheader">A year in review</h2>
+                    </div>
                 </div>
             </header>
             <?php foreach ($events as $event): ?>
@@ -50,6 +52,13 @@ include 'events.php';
                              data-center-center="opacity: 0;"
                              data-top-center="opacity: 1;"></div>
                     <?php endif ?>
+                    <?php if (isset($event->bgvideo)): ?>
+                        <video class="agigen-section__bgvideo" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
+                            <source src="video/<?php echo $event->bgvideo ?>.mp4" type="video/mp4">
+                            <source src="video/<?php echo $event->bgvideo ?>.webm" type="video/webm">
+                        </video>
+                    <?php endif ?>
+
                     <div class="agigen-section__container vc-container">
                         <div class="vc">
                             <h2 class="agigen-section__header"><?php echo $event->title ?></h2>
@@ -75,14 +84,6 @@ include 'events.php';
                             </div>
                         </div>
                     </div>
-
-                    <?php if (isset($event->bgvideo)): ?>
-                        <video class="agigen-section__bgvideo" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0">
-                            <source src="video/<?php echo $event->bgvideo ?>.mp4" type="video/mp4">
-                            <source src="video/<?php echo $event->bgvideo ?>.webm" type="video/webm">
-                        </video>
-                    <?php endif ?>
-
                 </section>
 
             <?php endforeach; ?>

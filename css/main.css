@@ -171,7 +171,7 @@ a {
 }
 
 
-.main-header , 
+.agigen-section--main-header,
 .agigen-section--footer {
     background: rgb(198,0,33);
     background: -moz-radial-gradient(center, ellipse cover,  rgba(198,0,33,1) 0%, rgba(109,0,25,1) 100%);
@@ -194,7 +194,6 @@ a {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1;
 }
 
 .agigen-btn {
