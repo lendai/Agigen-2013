@@ -32,6 +32,15 @@ $events = array(
         'img' => 'flixies.jpg'
         
     ),
+    
+    (object)array(
+        'title' => 'Billogram',
+        'caption' => "Relaunch of the entire system.",
+        'when' => 'March 2013',
+        'link' => (object)array('url' => 'https://billogram.com/sv', 'title' => 'Visit the site'),
+        'img' => 'billogram.jpg'
+        
+    ),
     // (object)array(
     //     'title' => 'bear.sh',
     //     'when' => 'March 2013'
