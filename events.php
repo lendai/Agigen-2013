@@ -23,7 +23,6 @@ $events = array(
         'img' => 'bigblog.jpg'
 
     ),
-    
     (object)array(
         'title' => 'Netflix - The Flixies',
         'caption' => "Netflix's own take on the Oscars",
@@ -32,7 +31,6 @@ $events = array(
         'img' => 'flixies.jpg'
         
     ),
-    
     (object)array(
         'title' => 'Billogram',
         'caption' => "Relaunch of the entire system.",
