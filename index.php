@@ -46,7 +46,7 @@ include 'events.php';
         <meta property="og:site_name" content="Agigen 2013">
         <meta property="og:description" content="A year in review. A summary of all the glory we achieved during 2013.">
         <meta property="og:url"   content="http://2013.agigen.se">
-        <meta property="og:image" content="http://2013.agigen.se/img/og.png">
+        <meta property="og:image" content="http://agigen.se/wp-content/themes/agigen_v3/images/opengraph.jpg" />
         <meta property="fb:admins" content="562883652">
 
         <script src="js/vendor/modernizr-custom.min.js"></script>
